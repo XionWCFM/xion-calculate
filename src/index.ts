@@ -10,9 +10,5 @@ function multiply(a: number, b: number) {
 function divide(a: number, b: number) {
   return a / b;
 }
-module.exports = {
-  add,
-  subtract,
-  multiply,
-  divide,
-};
+
+export { add, subtract, multiply, divide };
