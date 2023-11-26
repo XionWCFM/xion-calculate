@@ -14,10 +14,14 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./src/index.cjs",
+      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     }
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "devDependencies": {
     "@types/node": "^20.10.0",
     "esbuild": "^0.19.7",
