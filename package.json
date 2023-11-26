@@ -4,15 +4,15 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "prepack": "npm run build"
   },
   "author": "",
   "license": "MIT",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
+      "require": "./src/index.cjs",
       "types": "./dist/index.d.ts"
     }
   },
