@@ -1,14 +1,7 @@
-function add(a: number, b: number) {
-  return a + b;
-}
-function subtract(a: number, b: number) {
-  return a - b;
-}
-function multiply(a: number, b: number) {
-  return a * b;
-}
-function divide(a: number, b: number) {
-  return a / b;
-}
+export const helloWorld = (param: string | number) => {
+  return param;
+};
 
-export { add, subtract, multiply, divide };
+export const amazingAlert = (param: string | number) => {
+  alert(param);
+};
