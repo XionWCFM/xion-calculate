@@ -1,7 +1,3 @@
-export const helloWorld = (param: string | number) => {
-  return param;
-};
+import { useDebounce } from "./use-debounce";
 
-export const amazingAlert = (param: string | number) => {
-  alert(param);
-};
+export { useDebounce };
