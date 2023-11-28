@@ -14,8 +14,7 @@
     "jsx": "react",
     "paths": {
       "@/*": ["./*"]
-    },
-    "noEmit": true
+    }
   },
   "include": ["src/index.ts", "src/index.cts"]
 }
