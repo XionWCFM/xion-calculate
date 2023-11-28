@@ -1089,7 +1089,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context);
         }
-        function useState(initialState) {
+        function useState2(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1097,7 +1097,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef2(initialValue) {
+        function useRef(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
@@ -1890,8 +1890,8 @@ var require_react_development = __commonJS({
         exports.useLayoutEffect = useLayoutEffect;
         exports.useMemo = useMemo;
         exports.useReducer = useReducer;
-        exports.useRef = useRef2;
-        exports.useState = useState;
+        exports.useRef = useRef;
+        exports.useState = useState2;
         exports.useSyncExternalStore = useSyncExternalStore;
         exports.useTransition = useTransition;
         exports.version = ReactVersion;
@@ -1925,15 +1925,8 @@ module.exports = __toCommonJS(src_exports);
 // src/use-debounce.ts
 var import_react = __toESM(require_react(), 1);
 var useDebounce = (callback, time) => {
-  const timer = (0, import_react.useRef)(null);
-  return (...params) => {
-    if (timer.current)
-      clearTimeout(timer.current);
-    timer.current = setTimeout(() => {
-      callback(...params);
-      timer.current = null;
-    }, time);
-  };
+  const [hi, setHi] = (0, import_react.useState)(false);
+  return [hi, setHi];
 };
 /*! Bundled license information:
 
