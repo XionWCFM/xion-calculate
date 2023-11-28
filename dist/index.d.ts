@@ -1,2 +1,1 @@
-import { useDebounce } from "./use-debounce";
-export { useDebounce };
+export declare const hi: () => void;
