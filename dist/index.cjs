@@ -20,22 +20,14 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  add: () => add,
-  divide: () => divide,
-  multiply: () => multiply,
-  subtract: () => subtract
+  amazingAlert: () => amazingAlert,
+  helloWorld: () => helloWorld
 });
 module.exports = __toCommonJS(src_exports);
-function add(a, b) {
-  return a + b;
-}
-function subtract(a, b) {
-  return a - b;
-}
-function multiply(a, b) {
-  return a * b;
-}
-function divide(a, b) {
-  return a / b;
-}
+var helloWorld = (param) => {
+  return param;
+};
+var amazingAlert = (param) => {
+  alert(param);
+};
 //# sourceMappingURL=index.cjs.map

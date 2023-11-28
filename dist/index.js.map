@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/index.ts"],
-  "sourcesContent": ["function add(a: number, b: number) {\n  return a + b;\n}\nfunction subtract(a: number, b: number) {\n  return a - b;\n}\nfunction multiply(a: number, b: number) {\n  return a * b;\n}\nfunction divide(a: number, b: number) {\n  return a / b;\n}\n\nexport { add, subtract, multiply, divide };\n"],
-  "mappings": ";AAAA,SAAS,IAAI,GAAW,GAAW;AACjC,SAAO,IAAI;AACb;AACA,SAAS,SAAS,GAAW,GAAW;AACtC,SAAO,IAAI;AACb;AACA,SAAS,SAAS,GAAW,GAAW;AACtC,SAAO,IAAI;AACb;AACA,SAAS,OAAO,GAAW,GAAW;AACpC,SAAO,IAAI;AACb;",
+  "sourcesContent": ["export const helloWorld = (param: string | number) => {\n  return param;\n};\n\nexport const amazingAlert = (param: string | number) => {\n  alert(param);\n};\n"],
+  "mappings": ";AAAO,IAAM,aAAa,CAAC,UAA2B;AACpD,SAAO;AACT;AAEO,IAAM,eAAe,CAAC,UAA2B;AACtD,QAAM,KAAK;AACb;",
   "names": []
 }

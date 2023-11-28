@@ -1,20 +1,12 @@
 // src/index.ts
-function add(a, b) {
-  return a + b;
-}
-function subtract(a, b) {
-  return a - b;
-}
-function multiply(a, b) {
-  return a * b;
-}
-function divide(a, b) {
-  return a / b;
-}
+var helloWorld = (param) => {
+  return param;
+};
+var amazingAlert = (param) => {
+  alert(param);
+};
 export {
-  add,
-  divide,
-  multiply,
-  subtract
+  amazingAlert,
+  helloWorld
 };
 //# sourceMappingURL=index.js.map
