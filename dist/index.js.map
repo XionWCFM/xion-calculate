@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": ["../src/use-debounce.ts"],
-  "sourcesContent": ["\"use client\";\nimport { useRef } from \"react\";\n\nexport const useDebounce = <ParamType extends unknown[]>(\n  callback: (...params: ParamType) => void,\n  time: number,\n) => {\n  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);\n  return (...params: ParamType) => {\n    if (timer.current) clearTimeout(timer.current);\n\n    timer.current = setTimeout(() => {\n      callback(...params);\n      timer.current = null;\n    }, time);\n  };\n};\n"],
-  "mappings": "AACA,OAAS,UAAAA,MAAc,QAEhB,IAAMC,EAAc,CACzBC,EACAC,IACG,CACH,IAAMC,EAAQJ,EAA6C,IAAI,EAC/D,MAAO,IAAIK,IAAsB,CAC3BD,EAAM,SAAS,aAAaA,EAAM,OAAO,EAE7CA,EAAM,QAAU,WAAW,IAAM,CAC/BF,EAAS,GAAGG,CAAM,EAClBD,EAAM,QAAU,IAClB,EAAGD,CAAI,CACT,CACF",
-  "names": ["useRef", "useDebounce", "callback", "time", "timer", "params"]
+  "sources": ["../src/xion-comp.tsx", "../src/normal-func.ts", "../src/use-debounce.ts"],
+  "sourcesContent": ["import React from \"react\";\n\ninterface XionCompProps {}\n\nconst XionComp = ({}: XionCompProps) => {\n  return <div>XionComp</div>;\n};\n\nexport default XionComp;\n", "export const hi = () => 10;\n", "\"use client\";\nimport { useRef } from \"react\";\n\nexport const useDebounce = <ParamType extends unknown[]>(\n  callback: (...params: ParamType) => void,\n  time: number,\n) => {\n  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);\n  return (...params: ParamType) => {\n    if (timer.current) clearTimeout(timer.current);\n\n    timer.current = setTimeout(() => {\n      callback(...params);\n      timer.current = null;\n    }, time);\n  };\n};\n"],
+  "mappings": "AAAA,OAAOA,MAAW,QAIlB,IAAMC,EAAW,CAAC,CAAC,IACVD,EAAA,cAAC,WAAI,UAAQ,EAGfE,EAAQD,ECRR,IAAME,EAAK,IAAM,GCCxB,OAAS,UAAAC,MAAc,QAEhB,IAAMC,EAAc,CACzBC,EACAC,IACG,CACH,IAAMC,EAAQJ,EAA6C,IAAI,EAC/D,MAAO,IAAIK,IAAsB,CAC3BD,EAAM,SAAS,aAAaA,EAAM,OAAO,EAE7CA,EAAM,QAAU,WAAW,IAAM,CAC/BF,EAAS,GAAGG,CAAM,EAClBD,EAAM,QAAU,IAClB,EAAGD,CAAI,CACT,CACF",
+  "names": ["React", "XionComp", "xion_comp_default", "hi", "useRef", "useDebounce", "callback", "time", "timer", "params"]
 }
