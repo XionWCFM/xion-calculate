@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/use-debounce.ts"],
-  "sourcesContent": ["import { useRef } from \"react\";\n\nexport const useDebounce = <ParamType extends unknown[]>(\n  callback: (...params: ParamType) => void,\n  time: number,\n) => {\n  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);\n  return (...params: ParamType) => {\n    if (timer.current) clearTimeout(timer.current);\n\n    timer.current = setTimeout(() => {\n      callback(...params);\n      timer.current = null;\n    }, time);\n  };\n};\n"],
-  "mappings": "AAAA,OAAS,UAAAA,MAAc,QAEhB,IAAMC,EAAc,CACzBC,EACAC,IACG,CACH,IAAMC,EAAQJ,EAA6C,IAAI,EAC/D,MAAO,IAAIK,IAAsB,CAC3BD,EAAM,SAAS,aAAaA,EAAM,OAAO,EAE7CA,EAAM,QAAU,WAAW,IAAM,CAC/BF,EAAS,GAAGG,CAAM,EAClBD,EAAM,QAAU,IAClB,EAAGD,CAAI,CACT,CACF",
+  "sourcesContent": ["\"use client\";\nimport { useRef } from \"react\";\n\nexport const useDebounce = <ParamType extends unknown[]>(\n  callback: (...params: ParamType) => void,\n  time: number,\n) => {\n  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);\n  return (...params: ParamType) => {\n    if (timer.current) clearTimeout(timer.current);\n\n    timer.current = setTimeout(() => {\n      callback(...params);\n      timer.current = null;\n    }, time);\n  };\n};\n"],
+  "mappings": "AACA,OAAS,UAAAA,MAAc,QAEhB,IAAMC,EAAc,CACzBC,EACAC,IACG,CACH,IAAMC,EAAQJ,EAA6C,IAAI,EAC/D,MAAO,IAAIK,IAAsB,CAC3BD,EAAM,SAAS,aAAaA,EAAM,OAAO,EAE7CA,EAAM,QAAU,WAAW,IAAM,CAC/BF,EAAS,GAAGG,CAAM,EAClBD,EAAM,QAAU,IAClB,EAAGD,CAAI,CACT,CACF",
   "names": ["useRef", "useDebounce", "callback", "time", "timer", "params"]
 }
